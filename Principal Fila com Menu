@@ -1,0 +1,24 @@
+import java.util.Scanner;
+
+public class Principal {
+	public static void main(String[] args) {
+		Fila fila = new Fila();
+		Scanner in = new Scanner(System.in);
+		while (true) {
+			System.out.println("Digite: I - Inserir, A - Atender, L - Listar Fila  e Qualquer Outra Letra - Sair");
+			String op = in.nextLine();
+			if (op.equals("I")) {
+				System.out.println("Digite o Nome da Pessoa");
+				String nome = in.nextLine();
+				fila.inserir(nome);
+			} else if (op.equals("A")) {
+				System.out.println("Próxima da Fila: " + fila.atender());
+			} else if (op.equals("L")) {
+				fila.listar();
+			} else {
+				break;
+			}
+		}
+		in.close();
+	}
+}
