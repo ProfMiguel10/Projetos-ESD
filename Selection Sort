@@ -1,0 +1,36 @@
+package ordenacao;
+
+public class SelectionSort {
+	public static void selectionSortCrescente(int[] lista) {
+		int i, j, menor;
+		for (i = 0; i < lista.length - 1; i++) {
+			menor = i;
+			for (j = menor + 1; j < lista.length; j++) {
+				if (lista[j] < lista[menor]) {
+					menor = j;
+				}
+			}
+			if (menor != i) {
+				int tmp = lista[i];
+				lista[i] = lista[menor];
+				lista[menor] = tmp;
+			}
+		}
+	}
+	public static void selectionSortDecrescente(int[] lista) {
+		int i, j, maior;
+		for (i = 0; i < lista.length - 1; i++) {
+			maior = i;
+			for (j = maior + 1; j < lista.length; j++) {
+				if (lista[j] > lista[maior]) {
+					maior = j;
+				}
+			}
+			if (maior != i) {
+				int tmp = lista[i];
+				lista[i] = lista[maior];
+				lista[maior] = tmp;
+			}
+		}
+	}
+}
