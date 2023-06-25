@@ -1,0 +1,12 @@
+public class Principal {
+	public static void main(String[] args) {
+		Fila fila =new Fila();
+		fila.inserir("Diogo");
+		fila.inserir("Alexandre");
+		fila.inserir("André");
+		fila.inserir("Igor");
+		System.out.println("Elemento Atendido: " + fila.atender());
+		System.out.println("Pessoa na Fila: ");
+		fila.listar();
+	}
+}
