@@ -1,0 +1,12 @@
+package exemplo;
+
+import java.util.Arrays;
+
+public class Principal {
+	public static void main(String[] args) {
+		int[] lista = { 1000,10, 21, 50, 22, 23,80, 45, 54, 67, 2, 3, 4,  79, 84, 91, 8, 105, 113, 125, 131, 141 };
+		Arrays.sort(lista);//ordena a lista
+		System.out.println(BuscaBinaria.preparabuscaBinaria(lista, 91));
+		System.out.println(BuscaBinaria.preparabuscaBinaria(lista, 125));
+	}
+}
