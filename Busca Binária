@@ -1,0 +1,20 @@
+package exemplo;
+
+public class BuscaBinaria {
+	public static int preparabuscaBinaria(int[] lista, int elemento) {
+		return buscaBinaria(lista, 0, lista.length - 1, elemento);
+	}
+
+	public static int buscaBinaria(int[] lista, int menor, int maior, int elemento) {
+		int indexMetade = (maior + menor) / 2;
+		int elementoComp = lista[indexMetade];
+		if (menor > maior)
+			return -1;
+		else if (elementoComp == elemento)
+			return indexMetade;
+		else if (elementoComp < elemento)
+			return buscaBinaria(lista, indexMetade + 1, maior, elemento);
+		else
+			return buscaBinaria(lista, menor, indexMetade - 1, elemento);
+	}
+}
